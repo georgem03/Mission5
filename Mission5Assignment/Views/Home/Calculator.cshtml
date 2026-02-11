@@ -1,0 +1,49 @@
+@{
+    ViewData["Title"] = "Soccer Tutoring Calculator";
+}
+
+<div class="text-center">
+    <h1>Soccer Tutoring Cost Calculator ⚽</h1>
+</div>
+
+<div class="text-center mb-4">
+    <img src="https://ichef.bbci.co.uk/ace/standard/1024/cpsprodpb/9603/live/98888780-2e93-11f0-ae63-a53f4593c313.jpg"
+         class="img-fluid rounded shadow"
+         alt="Soccer player"
+         style="max-height:400px;" />
+</div>
+
+<div class="container mt-4">
+
+    <div class="mb-3">
+        <label>Hours Needed:</label>
+        <input type="number" id="hours" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Rate Per Hour:</label>
+        <input type="text" id="rate" class="form-control" value="40" readonly />
+    </div>
+
+    <div class="mb-3">
+        <button id="calculateBtn" class="btn btn-success">
+            Calculate Total
+        </button>
+    </div>
+
+    <div class="mb-3">
+        <label>Total Cost:</label>
+        <input type="text" id="total" class="form-control" readonly />
+    </div>
+
+    <div class="mt-4">
+        <a class="btn btn-secondary" asp-controller="Home" asp-action="Index">
+            Back to Home
+        </a>
+    </div>
+
+</div>
+
+@section Scripts {
+    <script src="~/js/calculator.js"></script>
+}
